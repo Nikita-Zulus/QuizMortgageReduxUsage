@@ -1,0 +1,525 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+.App {
+  width: 340px;
+  margin: 0 auto;
+}
+.form {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(21, 34, 66, 0.1);
+  width: 280px;
+}
+.formBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 32px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.54);
+  /* font-family: "Lato"; */
+  margin-bottom: 8px;
+}
+
+.button {
+  width: 200px;
+  height: 35px;
+  background-color: brown;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  margin: 0 auto;
+  text-decoration: none;
+  line-height: 32px;
+}
+.Main {
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+  height: 40px;
+}
+.line {
+  border-bottom: 2px solid grey;
+}
+.line:not(:last-child) {
+  margin-bottom: 5px;
+}
+.lines {
+  width: 30px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.benderFace {
+  /* width: 30px;
+  height: 30px; */
+  background-image: url("hotpng.svg");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 38px;
+}
+.Bender {
+  /* height: 170px; */
+  background-image: url("bender.svg");
+  width: 144px;
+  height: 246px;
+  background-position: center;
+  margin: 0 auto;
+}
+.LogoAndText {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.Main {
+  display: flex;
+}
+.TextGrad {
+  background: linear-gradient(-90deg, blue, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 31px;
+  margin-left: 6px;
+}
+.ButtonPrev {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  color: brown;
+  background: #e9e9e9;
+  border: none;
+  border-radius: 4px;
+  width: 100px;
+  height: 30px;
+  text-decoration: none;
+  line-height: 26px;
+}
+.ButtonNext {
+  display: flex;
+  justify-content: space-around;
+  color: #e9e9e9;
+  background: brown;
+  border: none;
+  border-radius: 4px;
+  width: 100px;
+  height: 30px;
+  margin-left: auto;
+  text-decoration: none;
+  line-height: 26px;
+}
+.send {
+  width: 130px;
+}
+.ButtonNextGrey {
+  display: flex;
+  justify-content: space-around;
+  color: rgba(21, 34, 66, 0.2);
+  background: #f1f2f4;
+  border-radius: 4px;
+  border: none;
+  width: 100px;
+  height: 30px;
+  margin-left: auto;
+  text-decoration: none;
+  line-height: 26px;
+}
+.ButtonsElements {
+  display: flex;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-top: 40px;
+}
+.ImageLabel {
+  width: 33.33333%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 88px;
+}
+.chosen {
+  height: 104px;
+  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: #bc0000;
+  padding-bottom: 5px;
+}
+.Ndfl {
+  background-image: url("./2ndfl.svg");
+  /*  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: #bc0000;
+  padding-bottom: 5px; */
+}
+.NdflGrey {
+  background-image: url("./2ndflGrey.svg");
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.formBank {
+  background-image: url("./formbank.svg");
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.54);
+}
+.formBankRed {
+  background-image: url("./formBankRed.svg");
+}
+.noWay {
+  background-image: url("./noway.svg");
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.54);
+}
+.RadiobuttonsSalary {
+  display: flex;
+}
+.RadiobuttonsSalary::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 1.1%,
+    rgba(0, 0, 0, 0.2) 51.93%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 1px;
+  width: 229px;
+  top: 104px;
+  right: 40px;
+  z-index: 0;
+}
+.RadioSalary {
+  display: none;
+}
+.FirstPage {
+  display: flex;
+  flex-direction: column;
+}
+.Ipoteka {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 16px;
+  margin-bottom: 14px;
+}
+.info {
+  margin-left: 32px;
+  margin-bottom: 20px;
+}
+.firstPageText {
+  margin-bottom: 25px;
+}
+.Bender {
+  margin-bottom: 20px;
+}
+.RadioBank {
+  display: none;
+}
+.labelBank {
+  display: flex;
+  align-items: center;
+  /* margin-left: 16px;
+  margin-right: 16px; */
+  border-radius: 4px;
+  font-weight: bold;
+  /* font-family: Lato; */
+  font-style: normal;
+}
+.BankVar {
+  padding-left: 20px;
+  padding-right: 16px;
+}
+.Questions {
+  text-align: start;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-top: 16px;
+  margin-bottom: 25px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+}
+.labelBank:nth-child(11) {
+  margin-top: 12px;
+}
+.AnotherBank {
+  background-image: url("./anotherbank.svg");
+}
+.Cash {
+  background-image: url("./cash.svg");
+}
+.chosenBank {
+  background: #f1f2f4;
+  background-image: url("./card.svg");
+  background-repeat: no-repeat;
+  background-position: center right 16px;
+}
+.chosenAnother {
+  background: #f1f2f4;
+}
+.Sber {
+  background-image: url("./logoSber.svg");
+  /* height: 42px;
+  width: 42px;
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+.Vtb {
+  background-image: url("./logoVtb.svg");
+}
+.Alfa {
+  background-image: url("./logoAlfa.svg");
+}
+.Raifaizen {
+  background-image: url("./logoRaifaizen.svg");
+}
+.Gazprom {
+  background-image: url("./logoGazprom.svg");
+}
+.Otcritie {
+  background-image: url("./logoOtcritie.svg");
+}
+.Rosbank {
+  background-image: url("./rosbank.svg");
+}
+.Rosselhozbank {
+  background-image: url("./rosselhozbank.svg");
+}
+.UnicreditBank {
+  background-image: url("./unicreditBank.svg");
+}
+.Promsviazbank {
+  background-image: url("./promsviazbank.svg");
+}
+.attitudeOfArmyLabel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 32px;
+  margin-right: 32px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+.armyText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.54);
+  /* font-family: "Lato"; */
+  margin-bottom: 5px;
+}
+.CounterText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.54);
+}
+.attitudeOfArmy {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(21, 34, 66, 0.1);
+  width: 280px;
+  padding-left: 12px;
+  font-size: 15px;
+}
+.InputCounter {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(21, 34, 66, 0.1);
+  width: 183px;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+}
+.textArmy {
+  margin-right: 32px;
+  margin-left: 32px;
+}
+.ArmyAttitude {
+  display: flex;
+  flex-direction: column;
+  margin-right: 32px;
+  margin-left: 32px;
+  width: 280px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  align-items: flex-start;
+  transition: height 250ms ease;
+}
+.AttitudeText {
+  height: 40px;
+  line-height: 35px;
+  padding-left: 12px;
+  text-align: start;
+  background-image: url("./arrowRight.svg");
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+  /*  align-items: center; */
+}
+.radioAttitude {
+  display: none;
+}
+.armyText::before {
+  position: absolute;
+  content: url("./redArrow.svg");
+  right: 20px;
+  bottom: 4px;
+  cursor: pointer;
+}
+.labelAttitude {
+  width: 100%;
+}
+.labelAttitude:hover {
+  background-color: #f1f2f4;
+  cursor: pointer;
+}
+.CountMinus,
+.CountPlus {
+  width: 48px;
+  height: 40px;
+  background: rgba(21, 34, 66, 0.1);
+  border-radius: 32px;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  color: #bc0000;
+  cursor: pointer;
+}
+.CountMinus:active,
+.CountPlus:active {
+  transform: scale(0.9);
+}
+.CounterWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 16px;
+}
+.boldText {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: start;
+  margin-bottom: 4px;
+}
+.normal {
+  font-weight: normal;
+}
+.GreyText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.72);
+  text-align: start;
+}
+.LabelDetail {
+  display: flex;
+  margin-bottom: 10px;
+}
+.ChildsDetails {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.checkDetail {
+  visibility: hidden;
+}
+.textItalic {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 10px;
+  text-align: start;
+}
+.sallaryBlock {
+  position: relative;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  height: 231px;
+}
+.newCheckBox {
+  background: #bcbfc5;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  margin-top: 1px;
+  cursor: pointer;
+}
+.newCheckBoxChecked {
+  background: #bc0000;
+  background-image: url("./checked.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  margin-top: 1px;
+  cursor: pointer;
+}
+.final {
+  margin-top: 5px;
+}
+.MaleFemale {
+  display: flex;
+  justify-content: center;
+}
